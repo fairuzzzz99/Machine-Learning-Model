@@ -105,6 +105,8 @@ I need to split data-set into two separate sets whic is training set and test se
 ![2021-02-07 (7)](https://user-images.githubusercontent.com/77633676/107126847-3de6b600-68ed-11eb-8e36-24d5553baf21.png)
 
 
+## DATA MINING PERFORMANCE COMPARISON
+
 
 
 
