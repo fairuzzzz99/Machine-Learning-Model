@@ -8,8 +8,12 @@ Predicting score ratings using CPD Analysis Dataset
 * Dataset Description
 * Hypothesis from dataset
 * Exploratory data analysis steps
-*
-*
+* Data Preprocessing
+* Descriptive and Predictive Data Mining
+* Data Mining Performances Comparison
+* Conclusion
+* Reflection
+
 
 ## Introduction
 Continuing Professional Development (CPD) is a combination of approaches, ideas and techniques that will help you manage your own learning and growth. The focus of CPD is firmly on results – the benefits that professional development can bring you in the real world.
@@ -47,10 +51,11 @@ Based on the dataset given, several questions has been made :
  
  df = pd.read_excel(io.BytesIO(uploaded['CPD for rpm and colab.xlsx']))
  
- ### Identifying the summary of a DataFrame. This method prints information about a DataFrame including the index dtype and column dtypes, non-null values and memory usage.
+ ### Identifying the summary of a DataFrame. 
+ This method prints information about a DataFrame including the index dtype and column dtypes, non-null values and memory usage.
  ![2021-02-07 (2)](https://user-images.githubusercontent.com/77633676/107124112-cad54380-68dc-11eb-9c1e-b709c23a06c5.png)
  
- ### Visualization Using PowerBi
+ ### Visualization Using PowerBI
  ![2021-02-07 (3)](https://user-images.githubusercontent.com/77633676/107124304-163c2180-68de-11eb-93af-cb8fd9bdd948.png)
  
  ### Answers of questions based on visualization
@@ -67,7 +72,7 @@ Based on the dataset given, several questions has been made :
  CPD- 287 , KAP- 94 , OLCPD- 3666 , PBP- 937 , PicTL- 453
  
  ## Data pre-processing
- Data preprocessing is a data mining technique that involves transforming raw data into an understandable format. Real-world data is often incomplete, inconsistent, and lacking in certain behaviors or trends, and is likely to contain many errors. Data preprocessing is a proven method of resolving such issues.
+ Data preprocessing is a data mining technique that involves transforming raw data into an understandable format. Real-world data is often incomplete, inconsistent, and lacking in certain behaviors or trends, and is likely to contain many errors.  To resolve such issues, data preprocessing must be done.
  
  ## Data Cleaning
  Data cleaning is the process of fixing or removing incorrect, corrupted, incorrectly formatted, duplicate, or incomplete data within a dataset.
@@ -119,10 +124,7 @@ A descriptive model describes a system or other entity and its relationship to i
 These are the steps in developing descriptive data mining solution :
 1. Choose the right number of cluster(k) by performing elbow method
 2. k-value is obtained by picking the fewest number of clusters that reduces the average distance. After k-value, the graph is almost linear.
-3.
-4.
-5.
-6.
+
 
 ## Predictive Data Mining
 Predictive analytics is the process by which information is extracted from existing data sets for determining patterns and predicting the forthcoming trends or outcomes.The methods come under this type of mining category are called classification, time-series analysis and regression. In this case i chose classification as the method for this process.
@@ -137,12 +139,11 @@ These are the steps in developing predictive data mining solution :
 ### DATA MINING PERFORMANCE COMPARISON
 
 ## Hyperparameter Tuning
-In machine learning, hyperparameter optimization or tuning is the problem of choosing a set of optimal hyperparameters for a learning algorithm. There are 3 common Hyperparameter optimization whuch is Grid Search, Random Search, Bayesian Optimization . In this case, i decided to use Grid Search algorithm.
-Grid search is argueable the most basic hyperparameter tuning method. 
-
+In machine learning, hyperparameter optimization or tuning is the problem of choosing a set of optimal hyperparameters for a learning algorithm. There are 3 common Hyperparameter optimization whuch is Grid Search, Random Search, Bayesian Optimization . With this technique, we simply build a model for each possible combination of all of the hyperparameter values provided, evaluating each model, and selecting the architecture which produces the best results. For example, we would define a list of values to try for both n_estimators and max_depth and a grid search would build a model for each possible combination. The diagram below shows the suggested values after hyperparameter tuning has been done for decision tree model: 
 
 ![2021-02-08 (11)](https://user-images.githubusercontent.com/77633676/107240782-43670c00-6a65-11eb-9540-7dff67580691.png)
 
+After the suggested values have been used to obtain new accuracy, we can see that the hyperparameter tuning makes the accuracy increase from 89.27% to 97.18%. Thus, the performance is increasing as well.
 
 ### Conclusion
 
