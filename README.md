@@ -77,7 +77,12 @@ Based on the dataset given, several questions has been made :
 3)	Select the small box at the attributes and it will shows the list of data for each attributes.
 4)	Tick the blanks data then click remove data to delete unwanted data in the specific attributes.
 5)	Continue the process for the next attributes until the last attributes in the Excel file to ensure the next process is smooth and valid
-6)  Remove unimportant attributes that are not actually needed, and don’t fit under the context of the problem we’re trying to solve
+
+### Data Integration
+Data integration is the merging of data from various sheets into one new sheets. Data integration is performed on the attribute which identifies unique entities. It needs to be done carefully because errors in data integration can produce deviant results and even misleading the action later. 
+
+### Data Selection
+The data that from the dataset given is often not all used, therefore I took the initiative to bremove unimportant attributes.
 
 ### VLOOKUP
 There are some purpose that lead us to do the VLOOKUP formula. It is because we need to sort the ‘Latihan’ in the Sheet 2 into each ‘Purata Skor Penilaian Keseluruhan’ in the Sheet 1 that I already renamed as ‘CSkor’. It will automatically construct each of the ‘Tajuk Latihan’ with specific score that given and counted in average. Here the steps that I used to do the VLOOKUP:
@@ -89,23 +94,64 @@ Besides,  I also that initiative to create an another attributes the classify th
 
 ![2021-02-07 (11)](https://user-images.githubusercontent.com/77633676/107127220-95862100-68ef-11eb-9e7e-c2bd0f763582.png)
 
-### Change data type
-By performing EDA, i found out that majority of the features in the datasets are in objects. So, i need to change it to numerical values. These are the examples on how to changes the data type.
+### Data Transformation
+Data is converted or combined into a format suitable for processing in data mining. Some data mining methods require special data formats before they can be applied.
+By performing EDA, I found out that the majority of the features in the data set are objects. So, I need to change the data type into numerical values.
+These are the example on how I change the data type from object into int:
 
-df = df.replace({"Klasifikasi": {"PBP":1,"KAP":2, "CPD":3}})
+`df = df.replace({"Klasifikasi":  {"PBP":1,"KAP":2, "CPD":3}})`
 
-df = df.replace({"Skor Klasifikasi":  {"High":1,"Middle":2, "Low":3}})
+`df = df.replace({"Skor Klasifikasi":  {"High":1,"Middle":2, "Low":3}})`
 
 ![ssdm](https://user-images.githubusercontent.com/77633676/107126550-8ef5aa80-68eb-11eb-945e-4e995ca1b288.jpeg)
 
 Now, the datasets type are now in numerical.
+
  ### Splitting datasets into training and test set
 I need to split data-set into two separate sets whic is training set and test set for machine learning model. Well here it’s your algorithm model that is going to learn from your data to make predictions. Generally we split the data-set into 70:30 ratio or any other test size. 70 percent data will be taken into train and 30 percent data will be taken into test. However, this splitting can be varies according to the data-set shape and size.
 
 ![2021-02-07 (7)](https://user-images.githubusercontent.com/77633676/107126847-3de6b600-68ed-11eb-8e36-24d5553baf21.png)
 
+## Steps in developing Descriptive and Predictive Data Mining 
 
-## DATA MINING PERFORMANCE COMPARISON
+### Descriptive Data Mining
+A descriptive model describes a system or other entity and its relationship to its environment. It is generally used to help specify and/or understand what the system is, what it does, and how it does it. In this case, i chose clustering as the method of our process and k-means as the data mining model.
+These are the steps in developing descriptive data mining solution :
+1. Choose the right number of cluster(k) by performing elbow method
+2. k-value is obtained by picking the fewest number of clusters that reduces the average distance. After k-value, the graph is almost linear.
+3.
+4.
+5.
+6.
+
+## Predictive Data Mining
+Predictive analytics is the process by which information is extracted from existing data sets for determining patterns and predicting the forthcoming trends or outcomes.The methods come under this type of mining category are called classification, time-series analysis and regression. In this case i chose classification as the method for this process.
+These are the steps in developing predictive data mining solution :  
+1.Load the required libraries.
+2.Import and upload file into GoogleColab
+3.Load data and read file that has been uploaded
+4.Divide given columns into two types of variables dependent(or target variable) and independent variable(or feature variables).
+5.Import the required classifier to be used metrics function
+6.Print the accuracy of the model (Decision Tree and Random Forest) 
+
+### DATA MINING PERFORMANCE COMPARISON
+
+## Hyperparameter Tuning
+In machine learning, hyperparameter optimization or tuning is the problem of choosing a set of optimal hyperparameters for a learning algorithm. There are 3 common Hyperparameter optimization whuch is Grid Search, Random Search, Bayesian Optimization . In this case, i decided to use Grid Search algorithm.
+Grid search is argueable the most basic hyperparameter tuning method. 
+
+
+![2021-02-08 (11)](https://user-images.githubusercontent.com/77633676/107240782-43670c00-6a65-11eb-9540-7dff67580691.png)
+
+
+### Conclusion
+
+All the model show increase in accuracy after tuning
+The best model goes to Decision Tree in predictive data mining with the accuracy of 100% 
+We get accuracy 100% because the dataset is overfit and easy to predict 
+
+### Reflections
+From this project,I have learned many new thing about data science. I Learn to visualize our hypothesis into interactive visualization. I also experienced in using software tools such PowerBI, Tableau, RapidMiner. Google Colaboratory-Python which i never know about their present. I also realized that Exploratory Data Analysis is a vital step in a data science project. The main pillars of EDA are data cleaning, data preparation, data exploration, and data visualization. I also learn the scope of work of data scientist whcih is not easy at all. It is such an incredible journey throughout the one semester learning Data Mining with Dr Fadhlina and do all the tasks and project. Thank you Dr Fadhlina for all the knowledge and effort in teaching us. 
 
 
 
