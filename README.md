@@ -58,6 +58,17 @@ Based on the dataset given, several questions has been made :
 ### Visualization Using PowerBI
  ![2021-02-07 (3)](https://user-images.githubusercontent.com/77633676/107124304-163c2180-68de-11eb-93af-cb8fd9bdd948.png)
  
+ OBSERVATION
+From the first diagram which Jabatan against Skor Penilaian, we can see that Fakulti Perubatan & Sains Kesihatan has the highest overall Skor Penilaian (803.64) while Fakulti  Alam Sekitar has the lowest overall Skor Penilaian (4.62) 
+
+From the second diagram which Average of Jumlah Jam and Tempat Latihan  against Klasifikasi, we can see KAP has the highest Average of Jumlah Jam (37.92 hour ) while PBP has the highest Average of Skor Penilaian (4.79) compared to KAP and CPD.
+
+From the third diagram which Klasifikasi against Skor Penilaian, we can see that PBP has the highest Skor Penilaian which is 4481.95  while KAP has the lowest Skor Penilaian  with 450.17.
+
+From the fourth diagram which Jumlah Jam against Tajuk Latihan & Tempat Latihan , with 81 hours(24.18), KURSUS SISTEM PUTRABLAST V3.8(SIRI-9 FSPM UPMKB) where the Tempat Latihan is MAKMAL D ICT, UPMKB has the highest  Jumlah Jam.
+
+From  the fifth diagram, Skor Penialaian of Klasifikasi (PBP) and Tajuk Latihan (MAJLIS PERASMIAN & ASPIRASI NC SEMPENA BULAN PENDIDIK UPM 2020) is 785.40  which is the highest.
+ 
 ### Answers of questions based on visualization
   * Which classification has the lowest score penilaian?
   KAP has the lowest score rating.
@@ -124,6 +135,30 @@ A descriptive model describes a system or other entity and its relationship to i
 These are the steps in developing descriptive data mining solution :
 1. Choose the right number of cluster(k) by performing elbow method
 2. k-value is obtained by picking the fewest number of clusters that reduces the average distance. After k-value, the graph is almost linear.
+3. Once we obtained the k-value, we can visualize the clustering.
+
+For RapidMiner :
+![dtree](https://user-images.githubusercontent.com/77633676/107356545-e8d4bb00-6b0b-11eb-801f-f53e16b4ff20.png)
+![rforest](https://user-images.githubusercontent.com/77633676/107356765-29cccf80-6b0c-11eb-98d0-ec7a63ddc7e5.png)
+On RapidMiner,  I implemented a new things which is Discretize.  I will explain the function of each parameters that I used in the RapidMiner in order to process my decision making.
+
+•Retrieved in RapidMiner is use to input the data folder into the process. We can also use Read parameter but it is slower since it needs to process each time when you fill in the data. However, by using retrieved, you just need to do it once since you already saved the file in the repository in the application.
+
+•	Discretize by Frequency - Discretized by Frequency is for when you want the sort or separate the implement into each of class that you already classified in the Excel and edit the number of bins based on class you stated. 
+
+•	Nominal to Binominal -  Nominal to Binominal operator is used for changing the type of nominal attributes to a binominal type. This operator not only changes the type of selected attributes but it also maps all values of these attributes to binominal values i.e. true and false.
+
+•	Set Role - We using set role to determine the special attributes that we need to count. 
+
+•	Select Attributes - Select attributes is using is mainly for separate the use and unuse attribute in order to calculate the attribute.
+
+•	Split Data - In split data, it will be boxes that we can fill to put ratio of our studies over 1.0. The top box usually 0.7 and below will be 0.3. But in some cases, people also put 0.8 and 0.2. The higher of top box the lower accuracy you can get formulally. 
+
+•	Decision Tree  / Random Forest - Decision tree and Random Forest are the common models that people use to predict things in RapidMiner normally it uses to calculate the classification, the characterized data not numerical.
+
+•	Apply Model - In apply model, it for applied the parameters that we stated behind it. It also have goal to predict the unseen data and to transform data into a pre processing model.
+
+•	Performance - It will make the models compatible and do the generating.
 
 
 ### Predictive Data Mining
