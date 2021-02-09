@@ -1,4 +1,4 @@
-# RATING AND PARTICIPANTS PREDICTION USING CPD ANALYSIS DATASET
+# Rating and Participation Prediction 
 Data Mining Project 
 Predicting score ratings using CPD Analysis Dataset
 
