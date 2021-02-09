@@ -189,7 +189,6 @@ These are the steps in developing predictive data mining solution :
 
 6.Print the accuracy of the model (Decision Tree and Random Forest) 
 
-## Data Mining Performance Comparison
 
 ### Hyperparameter Tuning
 In machine learning, hyperparameter optimization or tuning is the problem of choosing a set of optimal hyperparameters for a learning algorithm. There are 3 common Hyperparameter optimization whuch is Grid Search, Random Search, Bayesian Optimization . With this technique, we simply build a model for each possible combination of all of the hyperparameter values provided, evaluating each model, and selecting the architecture which produces the best results. For example, we would define a list of values to try for both n_estimators and max_depth and a grid search would build a model for each possible combination. The diagram below shows the suggested values after hyperparameter tuning has been done for decision tree model: 
@@ -207,20 +206,16 @@ Ratio 50:50
 ![2021-02-09 (12)](https://user-images.githubusercontent.com/77633676/107375012-3c063800-6b23-11eb-8dc0-df1a9a2aba81.png)
 
 Ration 70:50
+
 ![2021-02-09 (14)](https://user-images.githubusercontent.com/77633676/107375151-648e3200-6b23-11eb-99d5-28c9b6b39751.png)
 
 Python Ratio 50:50 & 70:30
 
+![2021-02-09 (18)](https://user-images.githubusercontent.com/77633676/107382838-4e846f80-6b2b-11eb-9a32-d8357ce3ee8a.png)
+
+In conclusion all models show increase in accuracy after tuning. The best model goes to Decision Tree in predictive data mining with the accuracy of 97.18% adter hyperparameter tuning. Accuracy is near 100% because the dataset is overfit and easy to predict 
 
 
-
-
-
-## Conclusion
-
-All the model show increase in accuracy after tuning
-The best model goes to Decision Tree in predictive data mining with the accuracy of 100% 
-We get accuracy 100% because the dataset is overfit and easy to predict 
 
 ## Reflections
 From this project,I have learned many new thing about data science. I Learn to visualize our hypothesis into interactive visualization. I also experienced in using software tools such PowerBI, Tableau, RapidMiner. Google Colaboratory-Python which i never know about their present. I also realized that Exploratory Data Analysis is a vital step in a data science project. The main pillars of EDA are data cleaning, data preparation, data exploration, and data visualization. I also learn the scope of work of data scientist whcih is not easy at all. It is such an incredible journey throughout the one semester learning Data Mining with Dr Fadhlina and do all the tasks and project. Thank you Dr Fadhlina for all the knowledge and effort in teaching us. 
