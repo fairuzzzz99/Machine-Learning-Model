@@ -10,8 +10,9 @@ Predicting score ratings using CPD Analysis Dataset
 * Exploratory data analysis steps
 * Data Preprocessing
 * Descriptive and Predictive Data Mining
-* 
+* Result & Analysis
 * Data Mining Performances Comparison
+* Dta Product
 * Conclusion
 * Reflection
 
@@ -131,16 +132,30 @@ I need to split data-set into two separate sets whic is training set and test se
 
 ## Steps in developing Descriptive and Predictive Data Mining 
 
-### Descriptive Data Mining
-A descriptive model describes a system or other entity and its relationship to its environment. It is generally used to help specify and/or understand what the system is, what it does, and how it does it. In this case, i chose clustering as the method of our process and k-means as the data mining model.
-These are the steps in developing descriptive data mining solution :
-1. Choose the right number of cluster(k) by performing elbow method
-2. k-value is obtained by picking the fewest number of clusters that reduces the average distance. After k-value, the graph is almost linear.
-3. Once we obtained the k-value, we can visualize the clustering.
+### Predictive Data Mining
+Predictive analytics is the process by which information is extracted from existing data sets for determining patterns and predicting the forthcoming trends or outcomes.The methods come under this type of mining category are called classification, time-series analysis and regression. In this case i chose classification as the method for this process.
+These are the steps in developing predictive data mining solution :  
+
+1.Load the required libraries.
+
+2.Import and upload file into GoogleColab
+
+3.Load data and read file that has been uploaded
+
+4.Divide given columns into two types of variables dependent(or target variable) and independent variable(or feature variables).
+
+5.Import the required classifier to be used metrics function
+
+6.Print the accuracy of the model (Decision Tree and Random Forest) 
 
 For RapidMiner :
+
 ![dtree](https://user-images.githubusercontent.com/77633676/107356545-e8d4bb00-6b0b-11eb-801f-f53e16b4ff20.png)
+
 ![rforest](https://user-images.githubusercontent.com/77633676/107356765-29cccf80-6b0c-11eb-98d0-ec7a63ddc7e5.png)
+
+
+
 On RapidMiner,  I implemented a new things which is Discretize.  I will explain the function of each parameters that I used in the RapidMiner in order to process my decision making.
 
 •Retrieved in RapidMiner is use to input the data folder into the process. We can also use Read parameter but it is slower since it needs to process each time when you fill in the data. However, by using retrieved, you just need to do it once since you already saved the file in the repository in the application.
@@ -161,7 +176,17 @@ On RapidMiner,  I implemented a new things which is Discretize.  I will explain 
 
 •	Performance - It will make the models compatible and do the generating.
 
-![kmeans](https://user-images.githubusercontent.com/77633676/107358607-8e892980-6b0e-11eb-9a47-1a2cc79ab6d0.png)
+### Descriptive Data Mining
+A descriptive model describes a system or other entity and its relationship to its environment. It is generally used to help specify and/or understand what the system is, what it does, and how it does it. In this case, i chose clustering as the method of our process and k-means as the data mining model.
+
+These are the steps in developing descriptive data mining solution :
+
+1. Choose the right number of cluster(k) by performing elbow method
+
+2. k-value is obtained by picking the fewest number of clusters that reduces the average distance. After k-value, the graph is almost linear.
+
+3. Once we obtained the k-value, we can visualize the clustering.
+
 
 For k-means:
 
@@ -173,21 +198,7 @@ For k-means:
 
 •	Cluster Model Visualization - This cluster model visualization is used to visualize the model of the clustering which is k-Means.
 
-### Predictive Data Mining
-Predictive analytics is the process by which information is extracted from existing data sets for determining patterns and predicting the forthcoming trends or outcomes.The methods come under this type of mining category are called classification, time-series analysis and regression. In this case i chose classification as the method for this process.
-These are the steps in developing predictive data mining solution :  
-
-1.Load the required libraries.
-
-2.Import and upload file into GoogleColab
-
-3.Load data and read file that has been uploaded
-
-4.Divide given columns into two types of variables dependent(or target variable) and independent variable(or feature variables).
-
-5.Import the required classifier to be used metrics function
-
-6.Print the accuracy of the model (Decision Tree and Random Forest) 
+![kmeans](https://user-images.githubusercontent.com/77633676/107358607-8e892980-6b0e-11eb-9a47-1a2cc79ab6d0.png) 
 
 
 ### Hyperparameter Tuning
@@ -198,14 +209,61 @@ In machine learning, hyperparameter optimization or tuning is the problem of cho
 After the suggested values have been used to obtain new accuracy, we can see that the hyperparameter tuning makes the accuracy increase from 89.27% to 97.18%. Thus, the performance is increasing as well.
 
 ## Result & Analysis
-### Data Mining Performance Comparison
+
+### Data Mining Performance Comparison(RapidMiner)
+
+#### Decision Tree
+
+For High 'Skor Klasifikasi'
+
+![2021-02-09 (20)](https://user-images.githubusercontent.com/77633676/107385549-f3a04780-6b2d-11eb-9842-1ee540e4c65e.png)
+
+![2021-02-09 (24)](https://user-images.githubusercontent.com/77633676/107386034-6dd0cc00-6b2e-11eb-877d-3ed9cd99c778.png)
+
+For Middle 'Skor Klasifikasi'
+
+![2021-02-09 (26)](https://user-images.githubusercontent.com/77633676/107386145-893bd700-6b2e-11eb-8464-b7f633551a42.png)
+
+![2021-02-09 (29)](https://user-images.githubusercontent.com/77633676/107386542-e8015080-6b2e-11eb-874c-b536be113d3d.png)
+
+For Low "skor Klasifikasi
+
+![2021-02-09 (30)](https://user-images.githubusercontent.com/77633676/107386617-fbacb700-6b2e-11eb-9530-f6ad32afa69b.png)
+
+![2021-02-09 (34)](https://user-images.githubusercontent.com/77633676/107387707-0d428e80-6b30-11eb-989d-8129b0047c3b.png)
+
+#### Auto Model
+
+![2021-02-09 (34)](https://user-images.githubusercontent.com/77633676/107387707-0d428e80-6b30-11eb-989d-8129b0047c3b.png)
+
+![2021-02-09 (35)](https://user-images.githubusercontent.com/77633676/107387769-1cc1d780-6b30-11eb-9241-e1d5fa196c9e.png)
+
+#### Random Forest
+
+![2021-02-09 (38)](https://user-images.githubusercontent.com/77633676/107388040-601c4600-6b30-11eb-8f19-cf5e5b1921b1.png)
+
+![2021-02-09 (40)](https://user-images.githubusercontent.com/77633676/107388295-a7a2d200-6b30-11eb-9884-62d36b0554fe.png)
+
+#### K-Means
+
+![2021-02-10 (7)](https://user-images.githubusercontent.com/77633676/107397440-9ca06f80-6b39-11eb-8467-842cb0474eb5.png)
+
+![2021-02-10 (9)](https://user-images.githubusercontent.com/77633676/107397514-ae821280-6b39-11eb-9e83-96d7612ba4cc.png)
+
+![2021-02-10 (11)](https://user-images.githubusercontent.com/77633676/107397576-bd68c500-6b39-11eb-9b78-1cff1b03816a.png)
+
+![2021-02-10 (13)](https://user-images.githubusercontent.com/77633676/107397630-cf4a6800-6b39-11eb-80e1-2bd8c4620a9c.png)
+
+
+### Data Mining Performance Comparison(Tuning)
+
 By using RapidMiner and Python, the accuracy of each models which are Decision Tree and Random Forest before and after Hyperparamater Tuning is obtained :
 
 Ratio 50:50
 
 ![2021-02-09 (12)](https://user-images.githubusercontent.com/77633676/107375012-3c063800-6b23-11eb-8dc0-df1a9a2aba81.png)
 
-Ration 70:50
+Ratio 70:50
 
 ![2021-02-09 (14)](https://user-images.githubusercontent.com/77633676/107375151-648e3200-6b23-11eb-99d5-28c9b6b39751.png)
 
@@ -216,9 +274,25 @@ Python Ratio 50:50 & 70:30
 In conclusion all models show increase in accuracy after tuning. The best model goes to Decision Tree in predictive data mining with the accuracy of 97.18% adter hyperparameter tuning. Accuracy is near 100% because the dataset is overfit and easy to predict 
 
 
+## Data Product
+
+![2021-02-09 (9)](https://user-images.githubusercontent.com/77633676/107395993-4ed73780-6b38-11eb-991e-4815d4a5cbe7.png)
+
+* Build web app by using Streamlit
+* The function of this web app is to predict the score rating by participant based on the attributes in the dataset which are Klasifikasi, Tajuk Latihan, Tempat Latihan, Jabatan, and Jumlah Jam.
+* Stakeholders : Staff & Management
+
+## Conclusion
+From this project, I managed to provide results based on the classification of core which are High, Middle and Low from the participant's feedbacks. The stakeholder which is the management who organized the events can measure the performance of their events and can make inprovement for their next events.
+
+![2021-02-10 (2)](https://user-images.githubusercontent.com/77633676/107395382-b6d94e00-6b37-11eb-916d-466e164340c3.png)
+
+![2021-02-10 (3)](https://user-images.githubusercontent.com/77633676/107395449-c8baf100-6b37-11eb-8df8-3f5e5dca1401.png)
+
+![2021-02-10 (2)](https://user-images.githubusercontent.com/77633676/107395382-b6d94e00-6b37-11eb-916d-466e164340c3.png)
 
 ## Reflections
-From this project,I have learned many new thing about data science. I Learn to visualize our hypothesis into interactive visualization. I also experienced in using software tools such PowerBI, Tableau, RapidMiner. Google Colaboratory-Python which i never know about their present. I also realized that Exploratory Data Analysis is a vital step in a data science project. The main pillars of EDA are data cleaning, data preparation, data exploration, and data visualization. I also learn the scope of work of data scientist whcih is not easy at all. It is such an incredible journey throughout the one semester learning Data Mining with Dr Fadhlina and do all the tasks and project. Thank you Dr Fadhlina for all the knowledge and effort in teaching us. 
+From this project,I have learned many new thing about data science. I Learn to visualize our hypothesis into interactive visualization. I also experienced in using software tools such PowerBI, Tableau, RapidMiner. Google Colaboratory-Python which i never know about their present. I also realized that Exploratory Data Analysis is a vital step in a data science project. The main pillars of EDA are data cleaning, data preparation, data exploration, and data visualization. I also learn the scope of work of data scientist whcih is not easy at all. It is such an incredible journey throughout the one semester learning Data Mining . Thank you to my Dta Mining lecturer, Dr Fadhlina for all the knowledge and effort in teaching us. 
 
 
 
