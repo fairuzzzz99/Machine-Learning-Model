@@ -160,6 +160,17 @@ On RapidMiner,  I implemented a new things which is Discretize.  I will explain 
 
 •	Performance - It will make the models compatible and do the generating.
 
+![kmeans](https://user-images.githubusercontent.com/77633676/107358607-8e892980-6b0e-11eb-9a47-1a2cc79ab6d0.png)
+
+For k-means:
+
+•	Read - Read in RapidMiner is used to read the data folder that have been input into the process.
+
+•	Select Attribute - Select attributes mainly used for separating the used and unused attributes in order to calculate the attribute. For thsi case, I select 'Klasifikasi' attribute to count each participant.
+
+•	Clustering - Select the model of the Clustering which is K-Means.
+
+•	Cluster Model Visualization - This cluster model visualization is used to visualize the model of the clustering which is k-Means.
 
 ### Predictive Data Mining
 Predictive analytics is the process by which information is extracted from existing data sets for determining patterns and predicting the forthcoming trends or outcomes.The methods come under this type of mining category are called classification, time-series analysis and regression. In this case i chose classification as the method for this process.
