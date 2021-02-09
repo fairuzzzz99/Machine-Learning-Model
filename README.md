@@ -10,6 +10,7 @@ Predicting score ratings using CPD Analysis Dataset
 * Exploratory data analysis steps
 * Data Preprocessing
 * Descriptive and Predictive Data Mining
+* Experiement Setting
 * Result & Analysis
 * Data Mining Performances Comparison
 * Dta Product
@@ -200,6 +201,7 @@ For k-means:
 
 ![kmeans](https://user-images.githubusercontent.com/77633676/107358607-8e892980-6b0e-11eb-9a47-1a2cc79ab6d0.png) 
 
+#### Experiement Setting 
 
 ### Hyperparameter Tuning
 In machine learning, hyperparameter optimization or tuning is the problem of choosing a set of optimal hyperparameters for a learning algorithm. There are 3 common Hyperparameter optimization whuch is Grid Search, Random Search, Bayesian Optimization . With this technique, we simply build a model for each possible combination of all of the hyperparameter values provided, evaluating each model, and selecting the architecture which produces the best results. For example, we would define a list of values to try for both n_estimators and max_depth and a grid search would build a model for each possible combination. The diagram below shows the suggested values after hyperparameter tuning has been done for decision tree model: 
@@ -218,19 +220,17 @@ For High 'Skor Klasifikasi'
 
 ![2021-02-09 (20)](https://user-images.githubusercontent.com/77633676/107385549-f3a04780-6b2d-11eb-9842-1ee540e4c65e.png)
 
-![2021-02-09 (24)](https://user-images.githubusercontent.com/77633676/107386034-6dd0cc00-6b2e-11eb-877d-3ed9cd99c778.png)
-
 For Middle 'Skor Klasifikasi'
+
+![2021-02-09 (24)](https://user-images.githubusercontent.com/77633676/107386034-6dd0cc00-6b2e-11eb-877d-3ed9cd99c778.png)
 
 ![2021-02-09 (26)](https://user-images.githubusercontent.com/77633676/107386145-893bd700-6b2e-11eb-8464-b7f633551a42.png)
 
-![2021-02-09 (29)](https://user-images.githubusercontent.com/77633676/107386542-e8015080-6b2e-11eb-874c-b536be113d3d.png)
-
 For Low "skor Klasifikasi
 
-![2021-02-09 (30)](https://user-images.githubusercontent.com/77633676/107386617-fbacb700-6b2e-11eb-9530-f6ad32afa69b.png)
+![2021-02-09 (29)](https://user-images.githubusercontent.com/77633676/107386542-e8015080-6b2e-11eb-874c-b536be113d3d.png)
 
-![2021-02-09 (34)](https://user-images.githubusercontent.com/77633676/107387707-0d428e80-6b30-11eb-989d-8129b0047c3b.png)
+![2021-02-09 (30)](https://user-images.githubusercontent.com/77633676/107386617-fbacb700-6b2e-11eb-9530-f6ad32afa69b.png)
 
 #### Auto Model
 
