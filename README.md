@@ -10,6 +10,7 @@ Predicting score ratings using CPD Analysis Dataset
 * Exploratory data analysis steps
 * Data Preprocessing
 * Descriptive and Predictive Data Mining
+* 
 * Data Mining Performances Comparison
 * Conclusion
 * Reflection
@@ -175,11 +176,17 @@ For k-means:
 ### Predictive Data Mining
 Predictive analytics is the process by which information is extracted from existing data sets for determining patterns and predicting the forthcoming trends or outcomes.The methods come under this type of mining category are called classification, time-series analysis and regression. In this case i chose classification as the method for this process.
 These are the steps in developing predictive data mining solution :  
+
 1.Load the required libraries.
+
 2.Import and upload file into GoogleColab
+
 3.Load data and read file that has been uploaded
+
 4.Divide given columns into two types of variables dependent(or target variable) and independent variable(or feature variables).
+
 5.Import the required classifier to be used metrics function
+
 6.Print the accuracy of the model (Decision Tree and Random Forest) 
 
 ## Data Mining Performance Comparison
@@ -190,6 +197,24 @@ In machine learning, hyperparameter optimization or tuning is the problem of cho
 ![2021-02-08 (11)](https://user-images.githubusercontent.com/77633676/107240782-43670c00-6a65-11eb-9540-7dff67580691.png)
 
 After the suggested values have been used to obtain new accuracy, we can see that the hyperparameter tuning makes the accuracy increase from 89.27% to 97.18%. Thus, the performance is increasing as well.
+
+## Result & Analysis
+### Data Mining Performance Comparison
+By using RapidMiner and Python, the accuracy of each models which are Decision Tree and Random Forest before and after Hyperparamater Tuning is obtained :
+
+Ratio 50:50
+
+![2021-02-09 (12)](https://user-images.githubusercontent.com/77633676/107375012-3c063800-6b23-11eb-8dc0-df1a9a2aba81.png)
+
+Ration 70:50
+![2021-02-09 (14)](https://user-images.githubusercontent.com/77633676/107375151-648e3200-6b23-11eb-99d5-28c9b6b39751.png)
+
+Python Ratio 50:50 & 70:30
+
+
+
+
+
 
 ## Conclusion
 
