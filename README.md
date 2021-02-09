@@ -32,17 +32,17 @@ Based on the dataset given, several questions has been made :
  * What is the relationship between rating and participants?
  * What is the total participants of every classifications?
  
- ## Stakeholders
+## Stakeholders
  The stakeholder that involved in CPD Analysis is management and staff(participants). The importance of this project to stakeholdersare:  
  * The management easy to predict the preferences of participants for the next event
  * The management can ollect data and analyze the most preferred activities to improve the rating and gain more participant
  * The management can improvise facilities needed during the activities
  * Participants can easily choose what topic of activity that suitable for them to join
   
- ## Exploratory Data Analysis Steps 
+### Exploratory Data Analysis Steps 
  Exploratory data analysis or EDA is the first and foremost of all tasks that a dataset goes through. EDA lets us understand the data and thus helping us to prepare it for the upcoming tasks.
   
- ### Import Dataset
+## Import Dataset
  import pandas as pd
  
  from google.colab import files
@@ -51,14 +51,14 @@ Based on the dataset given, several questions has been made :
  
  df = pd.read_excel(io.BytesIO(uploaded['CPD for rpm and colab.xlsx']))
  
- ### Identifying the summary of a DataFrame. 
+## Identifying the summary of a DataFrame. 
  This method prints information about a DataFrame including the index dtype and column dtypes, non-null values and memory usage.
  ![2021-02-07 (2)](https://user-images.githubusercontent.com/77633676/107124112-cad54380-68dc-11eb-9c1e-b709c23a06c5.png)
  
- ### Visualization Using PowerBI
+## Visualization Using PowerBI
  ![2021-02-07 (3)](https://user-images.githubusercontent.com/77633676/107124304-163c2180-68de-11eb-93af-cb8fd9bdd948.png)
  
- ### Answers of questions based on visualization
+## Answers of questions based on visualization
   * Which classification has the lowest score penilaian?
   KAP has the lowest score rating.
   
@@ -71,7 +71,7 @@ Based on the dataset given, several questions has been made :
  * What is the total participants of every classifications?
  CPD- 287 , KAP- 94 , OLCPD- 3666 , PBP- 937 , PicTL- 453
  
- ## Data pre-processing
+ ### Data pre-processing
  Data preprocessing is a data mining technique that involves transforming raw data into an understandable format. Real-world data is often incomplete, inconsistent, and lacking in certain behaviors or trends, and is likely to contain many errors.  To resolve such issues, data preprocessing must be done.
  
  ## Data Cleaning
@@ -83,13 +83,13 @@ Based on the dataset given, several questions has been made :
 4)	Tick the blanks data then click remove data to delete unwanted data in the specific attributes.
 5)	Continue the process for the next attributes until the last attributes in the Excel file to ensure the next process is smooth and valid
 
-### Data Integration
+## Data Integration
 Data integration is the merging of data from various sheets into one new sheets. Data integration is performed on the attribute which identifies unique entities. It needs to be done carefully because errors in data integration can produce deviant results and even misleading the action later. 
 
-### Data Selection
+## Data Selection
 The data that from the dataset given is often not all used, therefore I took the initiative to bremove unimportant attributes.
 
-### VLOOKUP
+## VLOOKUP
 There are some purpose that lead us to do the VLOOKUP formula. It is because we need to sort the ‘Latihan’ in the Sheet 2 into each ‘Purata Skor Penilaian Keseluruhan’ in the Sheet 1 that I already renamed as ‘CSkor’. It will automatically construct each of the ‘Tajuk Latihan’ with specific score that given and counted in average. Here the steps that I used to do the VLOOKUP:
 1)	Create an attribute in the dataset that we need to have new information.
 2)	Then state the VLOOKUP formula at the Formula Bar above the attributes od the dataset.
@@ -99,7 +99,7 @@ Besides,  I also that initiative to create an another attributes the classify th
 
 ![2021-02-07 (11)](https://user-images.githubusercontent.com/77633676/107127220-95862100-68ef-11eb-9e7e-c2bd0f763582.png)
 
-### Data Transformation
+## Data Transformation
 Data is converted or combined into a format suitable for processing in data mining. Some data mining methods require special data formats before they can be applied.
 By performing EDA, I found out that the majority of the features in the data set are objects. So, I need to change the data type into numerical values.
 These are the example on how I change the data type from object into int:
@@ -112,14 +112,14 @@ These are the example on how I change the data type from object into int:
 
 Now, the datasets type are now in numerical.
 
- ### Splitting datasets into training and test set
+## Splitting datasets into training and test set
 I need to split data-set into two separate sets whic is training set and test set for machine learning model. Well here it’s your algorithm model that is going to learn from your data to make predictions. Generally we split the data-set into 70:30 ratio or any other test size. 70 percent data will be taken into train and 30 percent data will be taken into test. However, this splitting can be varies according to the data-set shape and size.
 
 ![2021-02-07 (7)](https://user-images.githubusercontent.com/77633676/107126847-3de6b600-68ed-11eb-8e36-24d5553baf21.png)
 
-## Steps in developing Descriptive and Predictive Data Mining 
+### Steps in developing Descriptive and Predictive Data Mining 
 
-### Descriptive Data Mining
+## Descriptive Data Mining
 A descriptive model describes a system or other entity and its relationship to its environment. It is generally used to help specify and/or understand what the system is, what it does, and how it does it. In this case, i chose clustering as the method of our process and k-means as the data mining model.
 These are the steps in developing descriptive data mining solution :
 1. Choose the right number of cluster(k) by performing elbow method
@@ -136,7 +136,7 @@ These are the steps in developing predictive data mining solution :
 5.Import the required classifier to be used metrics function
 6.Print the accuracy of the model (Decision Tree and Random Forest) 
 
-### DATA MINING PERFORMANCE COMPARISON
+### Data Mining Performance Comparison
 
 ## Hyperparameter Tuning
 In machine learning, hyperparameter optimization or tuning is the problem of choosing a set of optimal hyperparameters for a learning algorithm. There are 3 common Hyperparameter optimization whuch is Grid Search, Random Search, Bayesian Optimization . With this technique, we simply build a model for each possible combination of all of the hyperparameter values provided, evaluating each model, and selecting the architecture which produces the best results. For example, we would define a list of values to try for both n_estimators and max_depth and a grid search would build a model for each possible combination. The diagram below shows the suggested values after hyperparameter tuning has been done for decision tree model: 
